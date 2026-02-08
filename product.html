@@ -145,11 +145,92 @@
 
             if (product) {
                 // Populate Data
-                document.title = `${product.name} - Seth Steels Enterprises`;
+                document.title = product.metaTitle || `${product.name} - Seth Steels Enterprises`;
+
+                // --- Dynamic SEO Injection ---
+
+                // 1. Meta Description
+                let metaDesc = document.querySelector('meta[name="description"]');
+                if (!metaDesc) {
+                    metaDesc = document.createElement('meta');
+                    metaDesc.name = "description";
+                    document.head.appendChild(metaDesc);
+                }
+                metaDesc.content = product.metaDescription || product.description;
+
+                // 2. Meta Keywords (Optional but good for some crawlers)
+                if (product.keywords) {
+                    let metaKeywords = document.querySelector('meta[name="keywords"]');
+                    if (!metaKeywords) {
+                        metaKeywords = document.createElement('meta');
+                        metaKeywords.name = "keywords";
+                        document.head.appendChild(metaKeywords);
+                    }
+                    metaKeywords.content = product.keywords;
+                }
+
+                // 3. Canonical URL
+                let canonical = document.querySelector('link[rel="canonical"]');
+                if (!canonical) {
+                    canonical = document.createElement('link');
+                    canonical.rel = "canonical";
+                    document.head.appendChild(canonical);
+                }
+                canonical.href = window.location.href.split('?')[0] + '?id=' + product.id;
+
+                // 4. Open Graph Tags (Facebook/LinkedIn)
+                const setMetaProp = (prop, content) => {
+                    let meta = document.querySelector(`meta[property="${prop}"]`);
+                    if (!meta) {
+                        meta = document.createElement('meta');
+                        meta.setAttribute('property', prop);
+                        document.head.appendChild(meta);
+                    }
+                    meta.content = content;
+                };
+                setMetaProp('og:title', product.metaTitle || product.name);
+                setMetaProp('og:description', product.metaDescription || product.description);
+                setMetaProp('og:image', window.location.origin + '/' + product.image);
+                setMetaProp('og:url', window.location.href);
+                setMetaProp('og:type', 'product');
+
+                // 5. Schema.org Structured Data (JSON-LD)
+                const schemaId = 'product-schema';
+                let scriptSchema = document.getElementById(schemaId);
+                if (!scriptSchema) {
+                    scriptSchema = document.createElement('script');
+                    scriptSchema.id = schemaId;
+                    scriptSchema.type = 'application/ld+json';
+                    document.head.appendChild(scriptSchema);
+                }
+                const schemaData = {
+                    "@context": "https://schema.org/",
+                    "@type": "Product",
+                    "name": product.name,
+                    "image": [
+                        window.location.origin + '/' + product.image
+                    ],
+                    "description": product.description,
+                    "brand": {
+                        "@type": "Brand",
+                        "name": "Seth Steels Enterprises"
+                    },
+                    "offers": {
+                        "@type": "Offer",
+                        "url": window.location.href,
+                        "priceCurrency": "INR",
+                        "availability": "https://schema.org/InStock",
+                        "price": "0" // Price on Request
+                    }
+                };
+                scriptSchema.textContent = JSON.stringify(schemaData);
+
+                // --- End SEO Injection ---
+
                 document.getElementById('product-title').textContent = product.name;
                 document.getElementById('product-description').textContent = product.details || product.description;
                 document.getElementById('product-image').src = product.image;
-                document.getElementById('product-image').alt = product.name;
+                document.getElementById('product-image').alt = `${product.name} - Seth Steels`; // SEO Optimized Alt
 
                 // Update Enquire Link to pre-fill message
                 const enquireBtn = document.getElementById('enquire-btn');
