@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Seth Steels Enterprises</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sethBlue: '#0056b3',
+                        sethGold: '#DAA520',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Load Product Data -->
+    <script src="js/products.js"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-body">
+
+    <!-- Navigation -->
+    <nav class="bg-white/95 backdrop-blur-md shadow-md fixed w-full z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex-shrink-0 flex items-center gap-3 group">
+                        <img src="img/header_logo.png" alt="Seth Steels Logo"
+                            class="h-12 w-auto transition-transform group-hover:scale-105">
+                        <div class="flex flex-col">
+                            <span
+                                class="font-heading font-extrabold text-xl tracking-tight text-gray-900 group-hover:text-sethBlue transition-colors">SETH
+                                STEELS</span>
+                            <span
+                                class="text-[0.65rem] font-bold text-sethBlue tracking-widest uppercase">Enterprises</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="flex items-center">
+                    <a href="index.html" class="text-sethBlue font-semibold hover:underline flex items-center gap-2">
+                        <i class="fas fa-arrow-left"></i> Back to Catalogue
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Product Content -->
+    <div id="product-container" class="pt-32 pb-20 min-h-screen">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Loading State -->
+            <div id="loading" class="text-center py-20">
+                <i class="fas fa-circle-notch fa-spin text-4xl text-sethBlue"></i>
+                <p class="mt-4 text-gray-500">Loading product details...</p>
+            </div>
+
+            <!-- Error State -->
+            <div id="error-message" class="hidden text-center py-20">
+                <i class="fas fa-exclamation-circle text-4xl text-red-500 mb-4"></i>
+                <h1 class="text-2xl font-bold text-gray-900">Product Not Found</h1>
+                <p class="mt-2 text-gray-600">The product you are looking for does not exist.</p>
+                <a href="index.html"
+                    class="inline-block mt-6 px-6 py-2 bg-sethBlue text-white rounded-lg hover:bg-blue-700 transition">Return
+                    Home</a>
+            </div>
+
+            <!-- Content -->
+            <div id="product-content" class="hidden grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+
+                <!-- Image Section -->
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden p-2 border border-gray-100 fade-in-section">
+                    <div class="relative aspect-w-4 aspect-h-3 bg-gray-100 rounded-xl overflow-hidden group">
+                        <img id="product-image" src="" alt="Product Image"
+                            class="object-cover w-full h-full transform transition-transform duration-700 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                    </div>
+                </div>
+
+                <!-- Details Section -->
+                <div class="space-y-8 fade-in-section">
+                    <div>
+                        <span class="text-sethBlue font-bold tracking-wide uppercase text-sm">Premium Quality</span>
+                        <h1 id="product-title"
+                            class="text-4xl md:text-5xl font-extrabold text-gray-900 mt-2 mb-4 leading-tight"></h1>
+                        <p id="product-description" class="text-xl text-gray-600 leading-relaxed"></p>
+                    </div>
+
+                    <!-- Specs Table -->
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                        <div class="bg-gray-50 px-6 py-4 border-b border-gray-200">
+                            <h3 class="font-bold text-gray-900">Specifications</h3>
+                        </div>
+                        <div class="p-6">
+                            <dl id="specs-list" class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-6">
+                                <!-- Specs injected here -->
+                            </dl>
+                        </div>
+                    </div>
+
+                    <!-- Call to Action -->
+                    <div class="bg-sethBlue/5 rounded-xl p-8 border border-sethBlue/10">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Interested in this product?</h3>
+                        <p class="text-gray-600 mb-6">Get a custom quote based on your specific requirements and
+                            quantity.</p>
+                        <a id="enquire-btn" href="index.html#contact"
+                            class="inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 bg-sethBlue text-white font-bold rounded-lg hover:bg-blue-700 transition-all shadow-lg transform hover:-translate-y-0.5">
+                            <i class="fas fa-paper-plane mr-2"></i> Request Quote
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer (Simplified) -->
+    <footer class="bg-gray-900 text-white py-12 mt-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-gray-400">&copy; 2024 Seth Steels Enterprises. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Logic to Load Product -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const productId = params.get('id');
+
+            const loading = document.getElementById('loading');
+            const content = document.getElementById('product-content');
+            const error = document.getElementById('error-message');
+
+            if (!productId || typeof window.products === 'undefined') {
+                showError();
+                return;
+            }
+
+            const product = window.products.find(p => p.id === productId);
+
+            if (product) {
+                // Populate Data
+                document.title = `${product.name} - Seth Steels Enterprises`;
+                document.getElementById('product-title').textContent = product.name;
+                document.getElementById('product-description').textContent = product.details || product.description;
+                document.getElementById('product-image').src = product.image;
+                document.getElementById('product-image').alt = product.name;
+
+                // Update Enquire Link to pre-fill message
+                const enquireBtn = document.getElementById('enquire-btn');
+                enquireBtn.href = `index.html#contact?product=${encodeURIComponent(product.name)}`;
+                enquireBtn.onclick = () => {
+                    // Start storage for the contact form to pick up
+                    sessionStorage.setItem('interestedProduct', product.name);
+                };
+
+                // Populate Specs
+                const specsContainer = document.getElementById('specs-list');
+                if (product.specs && product.specs.length > 0) {
+                    product.specs.forEach(spec => {
+                        const div = document.createElement('div');
+                        div.innerHTML = `
+                            <dt class="text-sm font-medium text-gray-500">${spec.label}</dt>
+                            <dd class="mt-1 text-lg font-semibold text-gray-900">${spec.value}</dd>
+                        `;
+                        specsContainer.appendChild(div);
+                    });
+                } else {
+                    specsContainer.innerHTML = '<p class="text-gray-500 italic">No specific specifications available.</p>';
+                }
+
+                // Show Content
+                loading.classList.add('hidden');
+                content.classList.remove('hidden');
+
+                // Trigger simple fade-in
+                setTimeout(() => {
+                    document.querySelectorAll('.fade-in-section').forEach(el => el.classList.add('is-visible'));
+                }, 100);
+
+            } else {
+                showError();
+            }
+
+            function showError() {
+                loading.classList.add('hidden');
+                error.classList.remove('hidden');
+            }
+        });
+    </script>
+</body>
+
+</html>

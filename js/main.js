@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
         menuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('open');
             const isOpen = mobileMenu.classList.contains('open');
-            
+
             // Toggle icons
             if (isOpen) {
                 menuIcon.classList.add('hidden');
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const targetId = this.getAttribute('href').substring(1);
             const targetElement = document.getElementById(targetId);
-            
+
             if (targetElement) {
                 // Close mobile menu if open
                 if (mobileMenu && mobileMenu.classList.contains('open')) {
@@ -64,4 +64,22 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+});
+
+// Check for interested product from product page
+const interestedProduct = sessionStorage.getItem('interestedProduct');
+const messageField = document.getElementById('message');
+if (interestedProduct && messageField) {
+    messageField.value = `I am interested in getting a quote for ${interestedProduct}. Please share pricing and availability.`;
+    // Clear it so it doesn't persist forever
+    sessionStorage.removeItem('interestedProduct');
+
+    // Scroll to contact form
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+        setTimeout(() => {
+            contactSection.scrollIntoView({ behavior: 'smooth' });
+        }, 500);
+    }
+}
 });
