@@ -554,70 +554,25 @@
 
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="py-24 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 fade-in-section">
-                <h2 class="text-sethBlue font-bold tracking-wide uppercase text-sm mb-3">Client Success</h2>
-                <h2 class="text-4xl font-extrabold text-gray-900 mb-4">What Our Partners Say</h2>
+    <section id="testimonials" class="py-24 bg-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-1/3 h-full bg-blue-50/50 skew-x-12 transform translate-x-1/2"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <span class="text-sethBlue font-bold tracking-widest uppercase text-sm">Client Success Stories</span>
+                <h2 class="text-4xl font-extrabold text-gray-900 mt-2 mb-4">Trusted by Professionals</h2>
+                <div class="h-1 w-24 bg-sethBlue mx-auto rounded-full"></div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Testimonial 1 -->
-                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 fade-in-section">
-                    <div class="flex items-center gap-1 text-yellow-400 mb-6">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                            class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="text-gray-600 mb-6 italic">"Seth Steels saved our project timeline. We needed a specific
-                        grade of MS plates within 48 hours, and they delivered exactly as promised. The quality was
-                        impeccable."</p>
-                    <div class="flex items-center gap-4">
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
-                            alt="Client" class="w-12 h-12 rounded-full object-cover">
-                        <div>
-                            <h4 class="font-bold text-gray-900">Rajesh Verma</h4>
-                            <p class="text-sm text-gray-500">Project Manager, InfraBuild</p>
-                        </div>
-                    </div>
-                </div>
+            <div id="homepage-testimonials-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Dynamically loaded from js/testimonials.js -->
+            </div>
 
-                <!-- Testimonial 2 -->
-                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 fade-in-section"
-                    style="transition-delay: 100ms;">
-                    <div class="flex items-center gap-1 text-yellow-400 mb-6">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                            class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="text-gray-600 mb-6 italic">"Reliability is everything in our business. We've been sourcing
-                        TMT bars from Seth Steels for 5 years now, and we've never had a single quality complaint."</p>
-                    <div class="flex items-center gap-4">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
-                            alt="Client" class="w-12 h-12 rounded-full object-cover">
-                        <div>
-                            <h4 class="font-bold text-gray-900">Anita Desai</h4>
-                            <p class="text-sm text-gray-500">Procurement Head, MetroCorp</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial 3 -->
-                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 fade-in-section"
-                    style="transition-delay: 200ms;">
-                    <div class="flex items-center gap-1 text-yellow-400 mb-6">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                            class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="text-gray-600 mb-6 italic">"Their pricing is transparent and competitive, but it's their
-                        customer service that keeps us coming back. They really understand industrial needs."</p>
-                    <div class="flex items-center gap-4">
-                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
-                            alt="Client" class="w-12 h-12 rounded-full object-cover">
-                        <div>
-                            <h4 class="font-bold text-gray-900">Vikram Singh</h4>
-                            <p class="text-sm text-gray-500">Director, SteelWorks Inc.</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="text-center mt-12">
+                <a href="testimonials.html"
+                    class="inline-flex items-center px-8 py-3 border border-sethBlue text-sethBlue font-bold rounded-full hover:bg-sethBlue hover:text-white transition-all shadow-md">
+                    Read All Client Stories
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
             </div>
         </div>
     </section>
