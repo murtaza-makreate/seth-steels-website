@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
 
                 window.scrollTo({
-                    top: targetElement.offsetTop - 80, // Offset for fixed header
+                    top: targetElement.offsetTop - 112, // Offset for fixed header
                     behavior: 'smooth'
                 });
             }
