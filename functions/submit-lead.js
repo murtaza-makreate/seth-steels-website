@@ -7,10 +7,7 @@ export async function onRequestPost({ request, env }) {
         const NOTION_DATABASE_ID = env.NOTION_DATABASE_ID;
 
         if (!NOTION_TOKEN || !NOTION_DATABASE_ID) {
-            const missing = [];
-            if (!NOTION_TOKEN) missing.push('NOTION_TOKEN');
-            if (!NOTION_DATABASE_ID) missing.push('NOTION_DATABASE_ID');
-            return new Response(JSON.stringify({ error: 'Server configuration missing', missing_keys: missing }), {
+            return new Response(JSON.stringify({ error: 'Server configuration missing' }), {
                 status: 500,
                 headers: { 'Content-Type': 'application/json' }
             });
