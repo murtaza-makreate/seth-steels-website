@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steel Industry Insights & Articles - Seth Steels Enterprises</title>
+    <meta name="description"
+        content="Read the latest news, trends, and technical guides about the steel industry, construction best practices, and material selection from Seth Steels experts.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sethBlue: '#1C70B4',
+                        sethGrey: '#777D7D',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Load Article Data -->
+    <script src="js/articles.js"></script>
+</head>
+
+<body class="font-sans text-gray-800 antialiased bg-gray-50 flex flex-col min-h-screen">
+
+    <!-- Header -->
+    <nav class="bg-white/95 backdrop-blur-md shadow-md fixed w-full z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center gap-2">
+                        <img src="img/logo.png" alt="Seth Steels Logo" class="h-12 w-auto object-contain">
+                    </a>
+                </div>
+                <div class="flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-sethBlue font-medium hidden md:block">Home</a>
+                    <a href="index.html#products"
+                        class="text-gray-600 hover:text-sethBlue font-medium hidden md:block">Products</a>
+                    <a href="index.html#contact"
+                        class="bg-sethBlue hover:bg-blue-700 text-white px-5 py-2 rounded-full font-semibold transition-all shadow-md">
+                        Get Quote
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">Steel Industry Insights</h1>
+            <p class="text-xl text-gray-400 max-w-2xl mx-auto">Expert advice, market trends, and technical guides to
+                help you build stronger.</p>
+        </div>
+    </section>
+
+    <!-- Articles Grid -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div id="articles-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Articles injected here via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-gray-400">&copy; 2024 Seth Steels Enterprises. All rights reserved.</p>
+            <div class="mt-4 space-x-4">
+                <a href="index.html" class="text-gray-500 hover:text-white transition">Home</a>
+                <a href="#" class="text-gray-500 hover:text-white transition">Articles</a>
+                <a href="index.html#contact" class="text-gray-500 hover:text-white transition">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Logic to render articles -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const grid = document.getElementById('articles-grid');
+
+            if (typeof window.articles !== 'undefined' && window.articles.length > 0) {
+                window.articles.forEach(article => {
+                    const card = document.createElement('div');
+                    card.className = 'bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col h-full group cursor-pointer';
+                    card.onclick = () => window.location.href = `article.html?id=${article.id}`;
+
+                    card.innerHTML = `
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="${article.image}" alt="${article.title}" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
+                            <span class="absolute bottom-4 left-4 text-white text-xs font-bold bg-sethBlue px-2 py-1 rounded shadow-sm">${article.date}</span>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-sethBlue transition-colors line-clamp-2">${article.title}</h3>
+                            <p class="text-gray-600 text-sm mb-4 line-clamp-3 mb-auto">${article.summary}</p>
+                            <a href="article.html?id=${article.id}" class="text-sethBlue font-semibold text-sm hover:underline mt-4 inline-flex items-center">
+                                Read Article <i class="fas fa-arrow-right ml-1 text-xs"></i>
+                            </a>
+                        </div>
+                    `;
+                    grid.appendChild(card);
+                });
+            } else {
+                grid.innerHTML = '<p class="text-center col-span-full text-gray-500">No articles found.</p>';
+            }
+        });
+    </script>
+</body>
+
+</html>
