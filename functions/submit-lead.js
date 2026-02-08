@@ -34,7 +34,7 @@ export async function onRequestPost({ request, env }) {
                     'Phone': {
                         phone_number: phone
                     },
-                    'Message': {
+                    'Requirement': {
                         rich_text: [
                             { text: { content: message } }
                         ]
