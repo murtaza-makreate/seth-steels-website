@@ -1,6 +1,6 @@
 export async function onRequestPost({ request, env }) {
     try {
-        const { name, email, phone, company, message } = await request.json();
+        const { name, email, phone, message } = await request.json();
 
         // Securely retrieve keys from environment variables
         const NOTION_TOKEN = env.NOTION_TOKEN;
@@ -33,11 +33,6 @@ export async function onRequestPost({ request, env }) {
                     },
                     'Phone': {
                         phone_number: phone
-                    },
-                    'Company': {
-                        rich_text: [
-                            { text: { content: company || 'N/A' } }
-                        ]
                     },
                     'Message': {
                         rich_text: [
