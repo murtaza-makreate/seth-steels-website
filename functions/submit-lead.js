@@ -32,7 +32,7 @@ export async function onRequestPost({ request, env }) {
                         email: email
                     },
                     'Phone': {
-                        phone_number: phone
+                        number: Number(phone.replace(/\D/g, '')) || 0
                     },
                     'Requirement': {
                         rich_text: [
