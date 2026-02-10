@@ -739,47 +739,78 @@
         </div>
     </section>
 
+    <!-- Latest Insights Section -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.css">
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/intlTelInput.min.js"></script>
+    <style>
+        .iti {
+            width: 100%;
+        }
+    </style>
+
     <script>
-        document.getElementById('lead-form').addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const form = e.target;
-            const status = document.getElementById('form-status');
-            const button = form.querySelector('button');
-            const originalButtonText = button.innerHTML;
+        document.addEventListener('DOMContentLoaded', () => {
+            const phoneInput = document.querySelector("#phone");
+            const iti = window.intlTelInput(phoneInput, {
+                utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/utils.js",
+                separateDialCode: true,
+                initialCountry: "in", // Default to India
+                preferredCountries: ["in", "us", "gb", "ae"]
+            });
 
-            button.disabled = true;
-            button.innerHTML = '<i class="fas fa-circle-notch animate-spin"></i> Sending...';
+            // Enforce numeric only input
+            phoneInput.addEventListener('input', function (e) {
+                this.value = this.value.replace(/[^0-9]/g, '');
+            });
 
-            const formData = {
-                name: form.name.value,
-                email: form.email.value,
-                phone: form.phone.value,
-                message: form.message.value
-            };
+            document.getElementById('lead-form').addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const form = e.target;
+                const status = document.getElementById('form-status');
+                const button = form.querySelector('button');
+                const originalButtonText = button.innerHTML;
 
-            try {
-                const response = await fetch('/submit-lead', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(formData)
-                });
-
-                if (response.ok) {
-                    status.textContent = "Success! Your message has been sent. We'll get back to you soon.";
-                    status.className = "mt-4 text-green-600 bg-green-50 p-4 rounded-lg text-sm font-medium";
+                if (!iti.isValidNumber()) {
+                    status.textContent = "Please enter a valid phone number.";
+                    status.className = "mt-4 text-red-600 bg-red-50 p-4 rounded-lg text-sm font-medium";
                     status.classList.remove('hidden');
-                    form.reset();
-                } else {
-                    throw new Error('Failed to send message');
+                    return;
                 }
-            } catch (error) {
-                status.textContent = "Oops! Something went wrong. Please try again or call us directly.";
-                status.className = "mt-4 text-red-600 bg-red-50 p-4 rounded-lg text-sm font-medium";
-                status.classList.remove('hidden');
-            } finally {
-                button.disabled = false;
-                button.innerHTML = originalButtonText;
-            }
+
+                button.disabled = true;
+                button.innerHTML = '<i class="fas fa-circle-notch animate-spin"></i> Sending...';
+
+                const formData = {
+                    name: form.name.value,
+                    email: form.email.value,
+                    phone: iti.getNumber(), // Get full international number
+                    message: form.message.value
+                };
+
+                try {
+                    const response = await fetch('/submit-lead', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(formData)
+                    });
+
+                    if (response.ok) {
+                        status.textContent = "Success! Your message has been sent. We'll get back to you soon.";
+                        status.className = "mt-4 text-green-600 bg-green-50 p-4 rounded-lg text-sm font-medium";
+                        status.classList.remove('hidden');
+                        form.reset();
+                    } else {
+                        throw new Error('Failed to send message');
+                    }
+                } catch (error) {
+                    status.textContent = "Oops! Something went wrong. Please try again or call us directly.";
+                    status.className = "mt-4 text-red-600 bg-red-50 p-4 rounded-lg text-sm font-medium";
+                    status.classList.remove('hidden');
+                } finally {
+                    button.disabled = false;
+                    button.innerHTML = originalButtonText;
+                }
+            });
         });
     </script>
 
