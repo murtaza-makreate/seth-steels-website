@@ -887,11 +887,15 @@
     <script src="js/main.js"></script>
     <!-- Load Articles for Homepage -->
     <script src="js/articles.js"></script>
+    <!-- Load Testimonials for Homepage -->
+    <script src="js/testimonials.js"></script>
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const grid = document.getElementById('latest-articles-grid');
-            if (grid && window.articles) {
-                // Get most recent 3 articles (assuming array is ordered or just take first 3)
+            // --- Load Latest Articles ---
+            const articleGrid = document.getElementById('latest-articles-grid');
+            if (articleGrid && window.articles) {
+                // Get most recent 3 articles
                 const latest = window.articles.slice(0, 3);
 
                 latest.forEach(article => {
@@ -913,7 +917,43 @@
                             </div>
                         </div>
                     `;
-                    grid.appendChild(card);
+                    articleGrid.appendChild(card);
+                });
+            }
+
+            // --- Load Homepage Testimonials ---
+            const testimonialGrid = document.getElementById('homepage-testimonials-grid');
+            if (testimonialGrid && window.testimonials) {
+                // Get top 3 testimonials
+                const topTestimonials = window.testimonials.slice(0, 3);
+
+                topTestimonials.forEach(testimonial => {
+                    const card = document.createElement('div');
+                    card.className = 'bg-gray-50 rounded-xl p-8 shadow-lg border border-gray-100 relative group hover:-translate-y-2 transition-transform duration-300 flex flex-col justify-between';
+
+                    card.innerHTML = `
+                        <div>
+                            <div class="absolute -top-6 left-8 bg-sethBlue text-white p-4 rounded-full shadow-lg">
+                                <i class="fas fa-quote-left text-2xl"></i>
+                            </div>
+                            <div class="mt-8">
+                                <div class="flex items-center mb-4">
+                                    <div class="flex text-yellow-400 text-sm">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600 italic mb-6">"${testimonial.content}"</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center mt-auto">
+                            <img src="${testimonial.image}" alt="${testimonial.name}" class="w-12 h-12 rounded-full border-2 border-white shadow-md object-cover">
+                            <div class="ml-4">
+                                <h4 class="font-bold text-gray-900">${testimonial.name}</h4>
+                                <span class="text-sm text-sethBlue font-semibold">${testimonial.role}</span>
+                            </div>
+                        </div>
+                    `;
+                    testimonialGrid.appendChild(card);
                 });
             }
         });
