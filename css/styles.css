@@ -4,7 +4,7 @@
     .text-shadow {
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
-    
+
     .text-shadow-lg {
         text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
     }
@@ -38,7 +38,8 @@ html {
 }
 
 #mobile-menu.open {
-    max-height: 500px; /* Adjust based on content */
+    max-height: 500px;
+    /* Adjust based on content */
     opacity: 1;
 }
 
@@ -47,5 +48,42 @@ html {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-image: linear-gradient(to right, #1C70B4, #777D7D);
+    background-image: linear-gradient(to right, #1C70B4, #4ecdc4);
+}
+
+/* Glassmorphism */
+.glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+}
+
+/* Modern Gradients & Buttons */
+.bg-gradient-seth {
+    background: linear-gradient(135deg, #1C70B4 0%, #00C6FF 100%);
+}
+
+.btn-gradient {
+    background-size: 200% auto;
+    background-image: linear-gradient(to right, #1C70B4 0%, #00C6FF 51%, #1C70B4 100%);
+    transition: 0.5s;
+}
+
+.btn-gradient:hover {
+    background-position: right center;
+    box-shadow: 0 0 20px rgba(0, 198, 255, 0.4);
+}
+
+/* Soft Glow Shadow */
+.shadow-glow-soft {
+    box-shadow: 0 10px 40px -10px rgba(28, 112, 180, 0.2);
 }
