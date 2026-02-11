@@ -132,20 +132,20 @@
             if (typeof window.articles !== 'undefined' && window.articles.length > 0) {
                 window.articles.forEach(article => {
                     const card = document.createElement('div');
-                    card.className = 'bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col h-full group cursor-pointer';
+                    card.className = 'glass-card rounded-xl overflow-hidden group cursor-pointer transition-all duration-300 hover:shadow-glow-soft bg-white/60';
                     card.onclick = () => window.location.href = `article.html?id=${article.id}`;
 
                     card.innerHTML = `
                         <div class="h-48 overflow-hidden relative">
-                            <img src="${article.image}" alt="${article.title}" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
-                            <span class="absolute bottom-4 left-4 text-white text-xs font-bold bg-sethBlue px-2 py-1 rounded shadow-sm">${article.date}</span>
+                            <img src="${article.image}" alt="${article.title}" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-80"></div>
+                            <span class="absolute bottom-4 left-4 text-white text-xs font-bold bg-gradient-seth px-3 py-1 rounded-full shadow-md">${article.date}</span>
                         </div>
                         <div class="p-6 flex flex-col flex-grow">
                             <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-sethBlue transition-colors line-clamp-2">${article.title}</h3>
-                            <p class="text-gray-600 text-sm mb-4 line-clamp-3 mb-auto">${article.summary}</p>
-                            <a href="article.html?id=${article.id}" class="text-sethBlue font-semibold text-sm hover:underline mt-4 inline-flex items-center">
-                                Read Article <i class="fas fa-arrow-right ml-1 text-xs"></i>
+                            <p class="text-gray-600 text-sm mb-4 line-clamp-3 mb-auto leading-relaxed">${article.summary}</p>
+                            <a href="article.html?id=${article.id}" class="text-sethBlue font-bold text-sm hover:underline mt-4 inline-flex items-center gradient-text">
+                                Read Article <i class="fas fa-arrow-right ml-2 text-xs transform group-hover:translate-x-1 transition-transform"></i>
                             </a>
                         </div>
                     `;
