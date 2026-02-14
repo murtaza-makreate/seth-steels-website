@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <title>Product Catalogue - Seth Steels Enterprises</title>
+    <meta name="description"
+        content="Browse our extensive range of high-quality steel products including MS Plates, TMT Bars, Structurals, and more. Filter by category and find exactly what you need.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sethBlue: '#1C70B4',
+                        sethGrey: '#777D7D',
+                        sethDark: '#1a1a1a',
+                        sethLight: '#f4f4f4',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'glow': '0 0 15px rgba(28, 112, 180, 0.3)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="font-sans text-gray-800 antialiased bg-gray-50 flex flex-col min-h-screen">
+
+    <!-- Header -->
+    <header class="fixed w-full bg-white/95 backdrop-blur-sm shadow-md z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-28">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center gap-2">
+                        <img src="img/logo.png" alt="Seth Steels Logo" class="h-20 w-auto object-contain">
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html"
+                        class="text-gray-600 hover:text-sethBlue font-medium transition-colors">Home</a>
+                    <a href="products.html" class="text-sethBlue font-bold transition-colors">Products</a>
+                    <a href="articles.html"
+                        class="text-gray-600 hover:text-sethBlue font-medium transition-colors">Articles</a>
+                    <a href="testimonials.html"
+                        class="text-gray-600 hover:text-sethBlue font-medium transition-colors">Testimonials</a>
+                    <a href="index.html#contact"
+                        class="bg-sethBlue hover:bg-blue-700 text-white px-6 py-2.5 rounded-full font-semibold transition-all transform hover:scale-105 shadow-glow">
+                        Get a Quote
+                    </a>
+                </nav>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn"
+                        class="text-gray-900 hover:text-sethBlue focus:outline-none p-2 glass rounded-lg">
+                        <i id="menu-icon" class="fas fa-bars text-2xl"></i>
+                        <i id="close-icon" class="fas fa-times text-2xl hidden"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden bg-white border-t border-gray-100 shadow-lg absolute w-full hidden">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="index.html"
+                    class="block px-3 py-3 text-base font-medium text-gray-600 hover:text-sethBlue hover:bg-gray-50 rounded-md">Home</a>
+                <a href="products.html"
+                    class="block px-3 py-3 text-base font-bold text-sethBlue bg-blue-50 rounded-md">Products</a>
+                <a href="articles.html"
+                    class="block px-3 py-3 text-base font-medium text-gray-600 hover:text-sethBlue hover:bg-gray-50 rounded-md">Articles</a>
+                <a href="testimonials.html"
+                    class="block px-3 py-3 text-base font-medium text-gray-600 hover:text-sethBlue hover:bg-gray-50 rounded-md">Testimonials</a>
+                <div class="pt-4">
+                    <a href="index.html#contact"
+                        class="block w-full text-center bg-sethBlue hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors shadow-md">
+                        Get a Quote
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow pt-32 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+
+        <div class="flex flex-col lg:flex-row gap-8">
+
+            <!-- Sidebar Filters -->
+            <aside class="w-full lg:w-64 flex-shrink-0">
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 sticky top-36">
+                    <h2 class="text-lg font-bold text-gray-900 mb-4 border-b pb-2">Categories</h2>
+
+                    <div class="space-y-2" id="category-filters">
+                        <label class="flex items-center space-x-3 cursor-pointer group">
+                            <input type="radio" name="category" value="all" checked
+                                class="form-radio text-sethBlue focus:ring-sethBlue h-4 w-4">
+                            <span class="text-gray-700 group-hover:text-sethBlue transition-colors">All Products</span>
+                        </label>
+                        <!-- Dynamic Categories will be injected here -->
+                    </div>
+
+                    <div class="mt-8">
+                        <h2 class="text-lg font-bold text-gray-900 mb-4 border-b pb-2">Need Help?</h2>
+                        <p class="text-sm text-gray-600 mb-4">Can't find what you're looking for? Contact our experts.
+                        </p>
+                        <a href="index.html#contact"
+                            class="inline-block w-full text-center bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-2 rounded-lg transition-colors border border-gray-200">
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Product Grid Area -->
+            <div class="flex-1">
+
+                <!-- Top Bar: Search & Sort -->
+                <div
+                    class="bg-white rounded-xl shadow-sm border border-gray-100 p-4 mb-6 flex flex-col sm:flex-row gap-4 justify-between items-center">
+
+                    <!-- Search -->
+                    <div class="relative w-full sm:w-96">
+                        <input type="text" id="search-input" placeholder="Search products (e.g., 'Plates', 'TMT')"
+                            class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sethBlue focus:border-transparent outline-none transition-all">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <i class="fas fa-search text-gray-400"></i>
+                        </div>
+                    </div>
+
+                    <!-- Sort & Count -->
+                    <div class="flex items-center gap-4 w-full sm:w-auto justify-between sm:justify-end">
+                        <span class="text-sm text-gray-600" id="product-count">Showing all products</span>
+                        <select id="sort-select"
+                            class="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-sethBlue outline-none cursor-pointer bg-white">
+                            <option value="featured">Featured</option>
+                            <option value="name-asc">Name (A-Z)</option>
+                            <option value="name-desc">Name (Z-A)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Grid -->
+                <div id="products-grid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                    <!-- Products will be injected here by JS -->
+                </div>
+
+                <!-- Empty State (Hidden by default) -->
+                <div id="no-results" class="hidden text-center py-20">
+                    <div class="bg-gray-50 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-search text-gray-300 text-3xl"></i>
+                    </div>
+                    <h3 class="text-lg font-medium text-gray-900">No products found</h3>
+                    <p class="text-gray-500 mt-1">Try adjusting your search or filter to find what you're looking for.
+                    </p>
+                    <button id="clear-filters-btn" class="mt-4 text-sethBlue font-medium hover:underline">Clear all
+                        filters</button>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Company Info -->
+                <div>
+                    <h3
+                        class="text-xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-300">
+                        Seth Steels
+                    </h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        Setting the standard in steel supply since 2004. Your trusted partner for quality industrial
+                        materials.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i
+                                class="fab fa-linkedin text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i
+                                class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i
+                                class="fab fa-instagram text-xl"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 border-b border-gray-700 pb-2">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-400 hover:text-blue-400 transition-colors">Home</a>
+                        </li>
+                        <li><a href="products.html"
+                                class="text-gray-400 hover:text-blue-400 transition-colors">Products</a></li>
+                        <li><a href="articles.html"
+                                class="text-gray-400 hover:text-blue-400 transition-colors">Articles</a></li>
+                        <li><a href="testimonials.html"
+                                class="text-gray-400 hover:text-blue-400 transition-colors">Testimonials</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Products -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 border-b border-gray-700 pb-2">Our Products</h4>
+                    <ul class="space-y-3">
+                        <li><a href="product.html?id=ms-plates"
+                                class="text-gray-400 hover:text-blue-400 transition-colors">MS Plates</a></li>
+                        <li><a href="product.html?id=tmt-bars"
+                                class="text-gray-400 hover:text-blue-400 transition-colors">TMT Bars</a></li>
+                        <li><a href="product.html?id=ms-beams"
+                                class="text-gray-400 hover:text-blue-400 transition-colors">Structural Steel</a></li>
+                        <li><a href="product.html?id=gi-sheets"
+                                class="text-gray-400 hover:text-blue-400 transition-colors">Roofing Sheets</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 border-b border-gray-700 pb-2">Contact Us</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1.5 mr-3 text-blue-500"></i>
+                            <span class="text-gray-400">Shop No.57, Andheri, Next Wajid Ali Compound. 90, Feet D.P.
+                                Road, Sakinaka, Mumbai-400072, Maharashtra</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3 text-blue-500"></i>
+                            <span class="text-gray-400">+91 98765 43210</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-blue-500"></i>
+                            <a href="mailto:info@sethsteels.com"
+                                class="text-gray-400 hover:text-blue-400 transition-colors">info@sethsteels.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-500">&copy; 2024 Seth Steels Enterprises. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/catalogue.js"></script>
+</body>
+
+</html>
