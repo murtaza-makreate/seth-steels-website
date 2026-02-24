@@ -33,14 +33,7 @@
     <!-- Load Article Data -->
     <script src="js/articles.js"></script>
 
-    <!-- Phone Number Input -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.css">
-    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/intlTelInput.min.js"></script>
     <style>
-        .iti {
-            width: 100%;
-        }
-
         /* Independent Column Scroll Utilities */
         @media (min-width: 1024px) {
             body {
@@ -154,61 +147,6 @@
 
             <!-- Right Column: Sidebar (Scrollable) -->
             <aside class="h-full lg:overflow-y-auto hide-scrollbar py-8 space-y-8">
-                <!-- Lead Form Widget -->
-                <div class="bg-gray-900 rounded-2xl shadow-2xl p-8 relative overflow-hidden">
-                    <!-- Subtle background pattern -->
-                    <div class="absolute inset-0 z-0 opacity-10">
-                        <div
-                            class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] bg-repeat">
-                        </div>
-                    </div>
-
-                    <div class="relative z-10 text-center mb-8">
-                        <h3 class="text-2xl font-extrabold text-white mb-2">Build with Us</h3>
-                        <p class="text-blue-200 text-sm">Industrial Grade Solutions</p>
-                    </div>
-
-                    <div class="bg-white rounded-xl p-6 relative z-10">
-                        <form id="lead-form" class="space-y-4">
-                            <div>
-                                <label for="name"
-                                    class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1">Full
-                                    Name</label>
-                                <input type="text" id="name" name="name" required
-                                    class="w-full px-4 py-2 text-sm rounded-lg border border-gray-200 focus:border-sethBlue focus:ring-1 focus:ring-sethBlue/20 outline-none transition-all"
-                                    placeholder="John Doe">
-                            </div>
-                            <div>
-                                <label for="email"
-                                    class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1">Email</label>
-                                <input type="email" id="email" name="email" required
-                                    class="w-full px-4 py-2 text-sm rounded-lg border border-gray-200 focus:border-sethBlue focus:ring-1 focus:ring-sethBlue/20 outline-none transition-all"
-                                    placeholder="john@example.com">
-                            </div>
-                            <div>
-                                <label for="phone"
-                                    class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1">Phone
-                                    Number</label>
-                                <input type="tel" id="phone" name="phone" required
-                                    class="w-full px-4 py-2 text-sm rounded-lg border border-gray-200 focus:border-sethBlue focus:ring-1 focus:ring-sethBlue/20 outline-none transition-all"
-                                    placeholder="+91 12345 67890">
-                            </div>
-                            <div>
-                                <label for="message"
-                                    class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1">Requirement</label>
-                                <textarea id="message" name="message" rows="3" required
-                                    class="w-full px-4 py-2 text-sm rounded-lg border border-gray-200 focus:border-sethBlue focus:ring-1 focus:ring-sethBlue/20 outline-none transition-all resize-none"
-                                    placeholder="What are you building?"></textarea>
-                            </div>
-                            <button type="submit"
-                                class="w-full py-3 bg-sethBlue hover:bg-blue-700 text-white font-bold rounded-lg text-sm transition-all transform hover:scale-[1.02] shadow-lg flex items-center justify-center gap-2">
-                                <span>Send Inquiry</span>
-                                <i class="fas fa-paper-plane text-xs"></i>
-                            </button>
-                        </form>
-                        <div id="form-status" class="mt-4 hidden text-center p-3 rounded-lg text-xs font-medium"></div>
-                    </div>
-                </div>
 
                 <!-- Contact Info Section (Below Form in Sidebar) -->
                 <div class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
@@ -314,71 +252,6 @@
                 });
             } else {
                 grid.innerHTML = '<p class="text-center col-span-full text-gray-500">No articles found.</p>';
-            }
-
-            // --- Lead Form Logic ---
-            const phoneInput = document.querySelector("#phone");
-            if (phoneInput) {
-                const iti = window.intlTelInput(phoneInput, {
-                    utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/utils.js",
-                    separateDialCode: true,
-                    initialCountry: "in",
-                    preferredCountries: ["in", "us", "gb", "ae"]
-                });
-
-                phoneInput.addEventListener('input', function (e) {
-                    this.value = this.value.replace(/[^0-9]/g, '');
-                });
-
-                document.getElementById('lead-form').addEventListener('submit', async (e) => {
-                    e.preventDefault();
-                    const form = e.target;
-                    const status = document.getElementById('form-status');
-                    const button = form.querySelector('button');
-                    const originalButtonText = button.innerHTML;
-
-                    if (!iti.isValidNumber()) {
-                        status.textContent = "Please enter a valid phone number.";
-                        status.className = "mt-4 text-red-600 bg-red-50 p-4 rounded-lg text-xs font-medium";
-                        status.classList.remove('hidden');
-                        return;
-                    }
-
-                    button.disabled = true;
-                    button.innerHTML = '<i class="fas fa-circle-notch animate-spin"></i> Sending...';
-
-                    const formData = {
-                        name: form.name.value,
-                        email: form.email.value,
-                        phone: iti.getNumber(),
-                        message: form.message.value,
-                        source: 'articles_list_page'
-                    };
-
-                    try {
-                        const response = await fetch('/submit-lead', {
-                            method: 'POST',
-                            headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify(formData)
-                        });
-
-                        if (response.ok) {
-                            status.textContent = "Inquiry sent! We'll be in touch.";
-                            status.className = "mt-4 text-green-600 bg-green-50 p-4 rounded-lg text-xs font-medium";
-                            status.classList.remove('hidden');
-                            form.reset();
-                        } else {
-                            throw new Error('Failed to send');
-                        }
-                    } catch (error) {
-                        status.textContent = "Failed to send. Please call us directly.";
-                        status.className = "mt-4 text-red-600 bg-red-50 p-4 rounded-lg text-xs font-medium";
-                        status.classList.remove('hidden');
-                    } finally {
-                        button.disabled = false;
-                        button.innerHTML = originalButtonText;
-                    }
-                });
             }
         });
     </script>
