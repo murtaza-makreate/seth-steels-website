@@ -33,23 +33,6 @@
     <!-- Load Article Data -->
     <script src="js/articles.js"></script>
 
-    <style>
-        /* Independent Column Scroll Utilities */
-        @media (min-width: 1024px) {
-            body {
-                overflow: hidden;
-            }
-        }
-
-        .hide-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-
-        .hide-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-    </style>
 
     <!-- Microsoft Clarity Tracking -->
     <script type="text/javascript">
@@ -131,85 +114,14 @@
         </div>
     </section>
 
-    <!-- Main Content Section -->
-    <div id="articles-container" class="pt-28 h-screen w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 h-full">
-
-            <!-- Left Column: Articles List (Scrollable) -->
-            <div class="lg:col-span-2 h-full lg:overflow-y-auto hide-scrollbar py-8 lg:pr-4">
-                <div class="space-y-16 pb-20">
-                    <!-- Articles Grid -->
-                    <div id="articles-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
-                        <!-- Articles injected here via JS -->
-                    </div>
-                </div>
+    <!-- Articles Grid Section -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div id="articles-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Articles injected here via JS -->
             </div>
-
-            <!-- Right Column: Sidebar (Scrollable) -->
-            <aside class="h-full lg:overflow-y-auto hide-scrollbar py-8 space-y-8">
-
-                <!-- Contact Info Section (Below Form in Sidebar) -->
-                <div class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
-                    <div class="p-8">
-                        <h2 class="text-xl font-bold text-gray-900 mb-6">Need Assistance?</h2>
-                        <div class="space-y-6 mb-8">
-                            <div class="flex items-start gap-4">
-                                <div
-                                    class="w-10 h-10 bg-sethBlue/10 rounded-full flex items-center justify-center text-sethBlue flex-shrink-0">
-                                    <i class="fas fa-phone-alt text-sm"></i>
-                                </div>
-                                <div>
-                                    <p class="text-xs text-gray-500 font-medium">Direct Line</p>
-                                    <p class="text-sm font-bold text-gray-900">+91 98765 43210</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start gap-4">
-                                <div
-                                    class="w-10 h-10 bg-sethBlue/10 rounded-full flex items-center justify-center text-sethBlue flex-shrink-0">
-                                    <i class="fas fa-envelope text-sm"></i>
-                                </div>
-                                <div>
-                                    <p class="text-xs text-gray-500 font-medium">Email Support</p>
-                                    <p class="text-sm font-bold text-gray-900">info@sethsteels.com</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start gap-4">
-                                <div
-                                    class="w-10 h-10 bg-sethBlue/10 rounded-full flex items-center justify-center text-sethBlue flex-shrink-0">
-                                    <i class="fas fa-map-marker-alt text-sm"></i>
-                                </div>
-                                <div>
-                                    <p class="text-xs text-gray-500 font-medium">Find Us</p>
-                                    <p class="text-xs text-gray-900 font-semibold leading-relaxed">Sakinaka,
-                                        Mumbai-400072</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="h-48 rounded-xl overflow-hidden border border-gray-100">
-                            <iframe
-                                src="https://maps.google.com/maps?q=19.099264,72.887923&t=&z=17&ie=UTF8&iwloc=&output=embed"
-                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product Widget -->
-                <div class="bg-blue-600 rounded-2xl p-8 text-white relative overflow-hidden shadow-xl mb-8">
-                    <div class="relative z-10 text-center">
-                        <i class="fas fa-hard-hat text-4xl mb-4 opacity-50"></i>
-                        <h4 class="text-lg font-bold mb-2">Quality Steel</h4>
-                        <p class="text-blue-100 text-xs mb-6 leading-relaxed">Standard-compliant MS Plates, CR Sheets,
-                            and more industrial solutions.</p>
-                        <a href="products.html"
-                            class="inline-block px-4 py-2 bg-white text-blue-600 font-bold rounded-lg text-xs uppercase tracking-widest hover:bg-blue-50 transition-colors shadow-md">
-                            Browse Products
-                        </a>
-                    </div>
-                    <i class="fas fa-industry absolute -bottom-4 -right-4 text-8xl opacity-10"></i>
-                </div>
-            </aside>
         </div>
-    </div>
+    </section>
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12 mt-auto">
