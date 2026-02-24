@@ -30,6 +30,24 @@
 
     <!-- Load Article Data -->
     <script src="js/articles.js"></script>
+
+    <!-- Phone Number Input -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.css">
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/intlTelInput.min.js"></script>
+    <style>
+        .iti {
+            width: 100%;
+        }
+    </style>
+
+    <!-- Microsoft Clarity Tracking -->
+    <script type="text/javascript">
+            (function (c, l, a, r, i, t, y) {
+                c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+                t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+                y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+            })(window, document, "clarity", "script", "vmjrv6mmfp");
+    </script>
 </head>
 
 <body class="font-sans text-gray-800 antialiased bg-gray-50 flex flex-col min-h-screen">
@@ -94,61 +112,185 @@
     </header>
 
     <!-- Article Content -->
-    <div id="article-container" class="pt-32 pb-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div id="article-container" class="pt-32 pb-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
 
-        <!-- Loading State -->
-        <div id="loading" class="text-center py-20">
-            <i class="fas fa-circle-notch fa-spin text-4xl text-sethBlue"></i>
-        </div>
-
-        <!-- Article Body -->
-        <article id="article-content" class="hidden bg-white p-8 md:p-12 rounded-2xl shadow-lg border border-gray-100">
-            <!-- Header -->
-            <header class="mb-10 text-center">
-                <span id="article-date"
-                    class="bg-gray-100 text-gray-600 text-sm font-bold px-3 py-1 rounded-full mb-4 inline-block"></span>
-                <h1 id="article-title" class="text-3xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-6">
-                </h1>
-                <div class="flex items-center justify-center gap-2 text-gray-500 text-sm">
-                    <i class="fas fa-user-circle"></i> <span id="article-author"></span>
+            <!-- Left Column: Article Content & Info -->
+            <div class="lg:col-span-2 space-y-12">
+                <!-- Loading State -->
+                <div id="loading" class="text-center py-20">
+                    <i class="fas fa-circle-notch fa-spin text-4xl text-sethBlue"></i>
                 </div>
-            </header>
 
-            <!-- Featured Image -->
-            <div class="mb-10 rounded-xl overflow-hidden shadow-md h-64 md:h-96 w-full relative">
-                <img id="article-image" src="" alt="Article Banner" class="w-full h-full object-cover">
-            </div>
+                <!-- Article Body -->
+                <article id="article-content"
+                    class="hidden bg-white p-8 md:p-12 rounded-2xl shadow-lg border border-gray-100">
+                    <!-- Header -->
+                    <header class="mb-10 text-center">
+                        <span id="article-date"
+                            class="bg-gray-100 text-gray-600 text-sm font-bold px-3 py-1 rounded-full mb-4 inline-block"></span>
+                        <h1 id="article-title"
+                            class="text-3xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-6">
+                        </h1>
+                        <div class="flex items-center justify-center gap-2 text-gray-500 text-sm">
+                            <i class="fas fa-user-circle"></i> <span id="article-author"></span>
+                        </div>
+                    </header>
 
-            <!-- Content Body -->
-            <div id="article-body" class="prose prose-lg prose-blue max-w-none text-gray-700">
-                <!-- Content injected here -->
-            </div>
+                    <!-- Featured Image -->
+                    <div class="mb-10 rounded-xl overflow-hidden shadow-md h-64 md:h-96 w-full relative">
+                        <img id="article-image" src="" alt="Article Banner" class="w-full h-full object-cover">
+                    </div>
 
-            <!-- Share / CTA -->
-            <div class="mt-12 pt-8 border-t border-gray-100 text-center">
-                <h3 class="font-bold text-gray-900 mb-4">Enjoyed this article? Share it or Get in Touch!</h3>
-                <div class="flex justify-center gap-4 mb-8">
-                    <button
-                        class="w-10 h-10 rounded-full bg-blue-100 text-blue-600 hover:bg-blue-600 hover:text-white transition flex items-center justify-center"><i
-                            class="fab fa-facebook-f"></i></button>
-                    <button
-                        class="w-10 h-10 rounded-full bg-sky-100 text-sky-500 hover:bg-sky-500 hover:text-white transition flex items-center justify-center"><i
-                            class="fab fa-twitter"></i></button>
-                    <button
-                        class="w-10 h-10 rounded-full bg-green-100 text-green-600 hover:bg-green-600 hover:text-white transition flex items-center justify-center"><i
-                            class="fab fa-whatsapp"></i></button>
+                    <!-- Content Body -->
+                    <div id="article-body" class="prose prose-lg prose-blue max-w-none text-gray-700 mb-12">
+                        <!-- Content injected here -->
+                    </div>
+
+                    <!-- Share Section -->
+                    <div class="pt-8 border-t border-gray-100 text-center">
+                        <h3 class="font-bold text-gray-900 mb-4 text-sm uppercase tracking-wider">Share this Article
+                        </h3>
+                        <div class="flex justify-center gap-4">
+                            <button
+                                class="w-10 h-10 rounded-full bg-blue-100 text-blue-600 hover:bg-blue-600 hover:text-white transition flex items-center justify-center"><i
+                                    class="fab fa-facebook-f"></i></button>
+                            <button
+                                class="w-10 h-10 rounded-full bg-sky-100 text-sky-500 hover:bg-sky-500 hover:text-white transition flex items-center justify-center"><i
+                                    class="fab fa-twitter"></i></button>
+                            <button
+                                class="w-10 h-10 rounded-full bg-green-100 text-green-600 hover:bg-green-600 hover:text-white transition flex items-center justify-center"><i
+                                    class="fab fa-whatsapp"></i></button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Contact Info Section (Below Article) -->
+                <div class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+                    <div class="p-8 md:p-10">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6">Contact Seth Steels</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                            <div class="space-y-6">
+                                <div class="flex items-start gap-4">
+                                    <div
+                                        class="w-12 h-12 bg-sethBlue/10 rounded-full flex items-center justify-center text-sethBlue flex-shrink-0">
+                                        <i class="fas fa-phone-alt"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-gray-500 font-medium">Call Us Now</p>
+                                        <p class="text-lg font-bold text-gray-900">+91 98765 43210</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-4">
+                                    <div
+                                        class="w-12 h-12 bg-sethBlue/10 rounded-full flex items-center justify-center text-sethBlue flex-shrink-0">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-gray-500 font-medium">Email Address</p>
+                                        <p class="text-lg font-bold text-gray-900">info@sethsteels.com</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-4">
+                                    <div
+                                        class="w-12 h-12 bg-sethBlue/10 rounded-full flex items-center justify-center text-sethBlue flex-shrink-0">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-gray-500 font-medium">Head Office</p>
+                                        <p class="text-sm text-gray-900 font-semibold">Shop No.57, Sakinaka,
+                                            Mumbai-400072</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="h-64 rounded-xl overflow-hidden border border-gray-100">
+                                <iframe
+                                    src="https://maps.google.com/maps?q=19.099264,72.887923&t=&z=17&ie=UTF8&iwloc=&output=embed"
+                                    width="100%" height="100%" style="border:0;" allowfullscreen=""
+                                    loading="lazy"></iframe>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <a href="index.html#contact"
-                    class="inline-flex items-center justify-center px-8 py-3 bg-sethBlue text-white font-bold rounded-lg hover:bg-blue-700 transition shadow-lg">
-                    Contact Seth Steels
-                </a>
-            </div>
-        </article>
 
-        <!-- Error State -->
-        <div id="error-message" class="hidden text-center py-20">
-            <h1 class="text-2xl font-bold text-gray-900">Article Not Found</h1>
-            <a href="articles.html" class="inline-block mt-4 text-sethBlue hover:underline">Return to Blog</a>
+                <!-- Error State -->
+                <div id="error-message" class="hidden text-center py-20">
+                    <h1 class="text-2xl font-bold text-gray-900">Article Not Found</h1>
+                    <a href="articles.html" class="inline-block mt-4 text-sethBlue hover:underline">Return to Blog</a>
+                </div>
+            </div>
+
+            <!-- Right Column: Lead Form Sidebar -->
+            <aside class="space-y-8 sticky top-36">
+                <div class="bg-gray-900 rounded-2xl shadow-2xl p-8 relative overflow-hidden">
+                    <!-- Subtle background pattern -->
+                    <div class="absolute inset-0 z-0 opacity-10">
+                        <div
+                            class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] bg-repeat">
+                        </div>
+                    </div>
+
+                    <div class="relative z-10 text-center mb-8">
+                        <h3 class="text-2xl font-extrabold text-white mb-2">Get a Quote</h3>
+                        <p class="text-blue-200 text-sm">Response within 24 hours</p>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-6 relative z-10">
+                        <form id="lead-form" class="space-y-4">
+                            <div>
+                                <label for="name"
+                                    class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1">Full
+                                    Name</label>
+                                <input type="text" id="name" name="name" required
+                                    class="w-full px-4 py-2 text-sm rounded-lg border border-gray-200 focus:border-sethBlue focus:ring-1 focus:ring-sethBlue/20 outline-none transition-all"
+                                    placeholder="John Doe">
+                            </div>
+                            <div>
+                                <label for="email"
+                                    class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1">Email</label>
+                                <input type="email" id="email" name="email" required
+                                    class="w-full px-4 py-2 text-sm rounded-lg border border-gray-200 focus:border-sethBlue focus:ring-1 focus:ring-sethBlue/20 outline-none transition-all"
+                                    placeholder="john@example.com">
+                            </div>
+                            <div>
+                                <label for="phone"
+                                    class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1">Phone
+                                    Number</label>
+                                <input type="tel" id="phone" name="phone" required
+                                    class="w-full px-4 py-2 text-sm rounded-lg border border-gray-200 focus:border-sethBlue focus:ring-1 focus:ring-sethBlue/20 outline-none transition-all"
+                                    placeholder="+91 12345 67890">
+                            </div>
+                            <div>
+                                <label for="message"
+                                    class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1">Requirement</label>
+                                <textarea id="message" name="message" rows="3" required
+                                    class="w-full px-4 py-2 text-sm rounded-lg border border-gray-200 focus:border-sethBlue focus:ring-1 focus:ring-sethBlue/20 outline-none transition-all resize-none"
+                                    placeholder="Specific steel needs..."></textarea>
+                            </div>
+                            <button type="submit"
+                                class="w-full py-3 bg-sethBlue hover:bg-blue-700 text-white font-bold rounded-lg text-sm transition-all transform hover:scale-[1.02] shadow-lg flex items-center justify-center gap-2">
+                                <span>Send Message</span>
+                                <i class="fas fa-paper-plane text-xs"></i>
+                            </button>
+                        </form>
+                        <div id="form-status" class="mt-4 hidden text-center p-3 rounded-lg text-xs font-medium"></div>
+                    </div>
+                </div>
+
+                <!-- Secondary Sidebar Widget -->
+                <div class="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm text-center">
+                    <div
+                        class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center text-sethBlue mx-auto mb-4">
+                        <i class="fas fa-file-pdf text-2xl"></i>
+                    </div>
+                    <h4 class="font-bold text-gray-900 mb-2">Product Brochure</h4>
+                    <p class="text-sm text-gray-500 mb-6">Download our complete industrial steel catalogue for 2024.</p>
+                    <a href="#"
+                        class="block w-full py-2 bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold rounded-lg text-sm transition-colors uppercase tracking-widest">
+                        Download Now
+                    </a>
+                </div>
+            </aside>
         </div>
     </div>
 
@@ -198,6 +340,71 @@
             function showError() {
                 loading.classList.add('hidden');
                 error.classList.remove('hidden');
+            }
+
+            // --- Lead Form Logic ---
+            const phoneInput = document.querySelector("#phone");
+            if (phoneInput) {
+                const iti = window.intlTelInput(phoneInput, {
+                    utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/utils.js",
+                    separateDialCode: true,
+                    initialCountry: "in",
+                    preferredCountries: ["in", "us", "gb", "ae"]
+                });
+
+                phoneInput.addEventListener('input', function (e) {
+                    this.value = this.value.replace(/[^0-9]/g, '');
+                });
+
+                document.getElementById('lead-form').addEventListener('submit', async (e) => {
+                    e.preventDefault();
+                    const form = e.target;
+                    const status = document.getElementById('form-status');
+                    const button = form.querySelector('button');
+                    const originalButtonText = button.innerHTML;
+
+                    if (!iti.isValidNumber()) {
+                        status.textContent = "Please enter a valid phone number.";
+                        status.className = "mt-4 text-red-600 bg-red-50 p-4 rounded-lg text-xs font-medium";
+                        status.classList.remove('hidden');
+                        return;
+                    }
+
+                    button.disabled = true;
+                    button.innerHTML = '<i class="fas fa-circle-notch animate-spin"></i> Sending...';
+
+                    const formData = {
+                        name: form.name.value,
+                        email: form.email.value,
+                        phone: iti.getNumber(),
+                        message: form.message.value,
+                        articleId: articleId // Tracking which article they were reading
+                    };
+
+                    try {
+                        const response = await fetch('/submit-lead', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(formData)
+                        });
+
+                        if (response.ok) {
+                            status.textContent = "Sent successfully! We'll contact you soon.";
+                            status.className = "mt-4 text-green-600 bg-green-50 p-4 rounded-lg text-xs font-medium";
+                            status.classList.remove('hidden');
+                            form.reset();
+                        } else {
+                            throw new Error('Failed to send');
+                        }
+                    } catch (error) {
+                        status.textContent = "Failed to send. Please call us directly.";
+                        status.className = "mt-4 text-red-600 bg-red-50 p-4 rounded-lg text-xs font-medium";
+                        status.classList.remove('hidden');
+                    } finally {
+                        button.disabled = false;
+                        button.innerHTML = originalButtonText;
+                    }
+                });
             }
         });
     </script>
