@@ -838,6 +838,261 @@ const articles = [
         image: 'img/ms_beams.png',
         date: 'February 25, 2026',
         author: 'Economic Research Unit'
+    },
+    {
+        id: 'chequered-plates-safety-industrial-flooring',
+        title: 'Chequered Plates: Safety, Durability, and Applications in Industrial Flooring',
+        summary: 'In industrial environments, the ground beneath your feet is as much a structural component as the beams above your head. Chequered plates are the unsung heroes of workplace safety.',
+        content: `
+            <p class="lead text-xl text-gray-600 mb-6 font-serif italic">In industrial environments, the ground beneath your feet is as much a structural component as the beams above your head. <strong>Chequered plates</strong>, also known as diamond or tread plates, are the unsung heroes of workplace safety, providing the necessary traction and durability for high-traffic zones.</p>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-10 mb-6">1. What are Chequered Plates?</h2>
+            <p class="mb-6">Chequered plates are flat steel products featuring a raised pattern on one side—typically in the form of diamonds, teardrops, or lenticular shapes. These patterns aren't just for show; they are mathematically designed to increase friction and prevent slips in environments where water, oil, or dust might be present.</p>
+            <p class="mb-6">At <a href="index.html" class="text-sethBlue hover:underline">Seth Steels Enterprises</a>, we supply MS Chequered plates in various thicknesses, ranging from 3mm to 12mm, catering to everything from light pedestrian walkways to heavy-duty industrial platforms.</p>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-10 mb-6">2. Manufacturing Process</h2>
+            <p class="mb-6">Most chequered plates are produced using the hot-rolling process. As the steel passes through the final set of rollers, one roller has the pattern engraved into it, pressing the design into the hot, malleable steel. This ensures that the pattern is an integral part of the plate, not just a surface coating that will wear off over time.</p>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-10 mb-6">3. Key Benefits</h2>
+            <ul class="list-disc pl-6 space-y-4 mb-8 text-lg">
+                <li><strong>Slip Resistance:</strong> The primary benefit. The raised pattern provides multi-directional grip.</li>
+                <li><strong>Self-Draining:</strong> The gaps between the patterns allow liquids to flow away, preventing puddles.</li>
+                <li><strong>Durability:</strong> Made from high-grade mild steel, these plates withstand heavy impact and rolling loads from forklifts and trolleys.</li>
+                <li><strong>Low Maintenance:</strong> They require minimal upkeep beyond occasional cleaning to remove debris from the patterns.</li>
+            </ul>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-10 mb-6">4. Common Applications</h2>
+            <ol class="list-decimal pl-6 space-y-4 mb-8 text-lg">
+                <li><strong>Industrial Flooring:</strong> Walkways, catwalks, and mezzanines in factories.</li>
+                <li><strong>Transportation:</strong> Floors for trucks, trailers, and bus steps.</li>
+                <li><strong>Stair Treads:</strong> Creating safe, non-slip steps for fire escapes and industrial stairs.</li>
+                <li><strong>Ramps:</strong> Providing traction for loading docks and wheelchair access.</li>
+            </ol>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-10 mb-6">5. Conclusion</h2>
+            <p>Safety is non-negotiable in industry. Choosing the right chequered plate is a small investment that prevents costly accidents and ensures long-term operational efficiency. Contact us today to discuss the right pattern and thickness for your specific flooring needs.</p>
+        `,
+        image: 'img/ms_plates.png',
+        date: 'February 25, 2026',
+        author: 'Seth Steels Safety Board'
+    },
+    {
+        id: 'metallurgy-of-welding-structural-steel',
+        title: 'The Metallurgy of Welding Structural Steel: Best Practices for Builders',
+        summary: 'A steel structure is only as strong as its connections. Understanding the metallurgy behind the arc is essential for every civil engineer and contractor.',
+        content: `
+            <p class="lead text-xl text-gray-600 mb-6 font-serif italic">A steel structure is only as strong as its connections. While <a href="product.html?id=ms-beams" class="text-sethBlue hover:underline">MS Beams</a> provide the strength, it is the <strong>welding</strong> that ensures structural integrity. Understanding the metallurgy behind the arc is essential for every civil engineer and contractor.</p>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-10 mb-6">1. The Heat-Affected Zone (HAZ)</h2>
+            <p class="mb-6">When you weld steel, you aren't just melting a rod; you are localizedly changing the molecular structure of the base metal. The area immediately surrounding the weld is known as the Heat-Affected Zone. If the cooling rate is too fast, this zone can become brittle, leading to "cold cracking."</p>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-10 mb-6">2. Carbon Equivalent (CE) and Weldability</h2>
+            <p class="mb-6">The "weldability" of steel is primarily determined by its carbon content. Structural grades like <strong>IS 2062 E250</strong> are designed with low carbon (typically &lt;0.23%) to ensure they can be welded easily without pre-heating. However, as you move to higher grades like E350, the chemistry becomes more complex, necessitating stricter welding procedures.</p>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-10 mb-6">3. Best Practices for Structural Welding</h2>
+            <ul class="list-disc pl-6 space-y-4 mb-8 text-lg">
+                <li><strong>Proper Edge Preparation:</strong> Use V-grooves or U-grooves on thicker <a href="product.html?id=ms-plates" class="text-sethBlue hover:underline">MS Plates</a> to ensure full penetration of the weld.</li>
+                <li><strong>Electrode Selection:</strong> Match the tensile strength of the welding rod to the base metal. For E250 steel, standard 6013 or 7018 electrodes are common.</li>
+                <li><strong>Maintain Dryness:</strong> Low-hydrogen electrodes (like 7018) must be kept in ovens to prevent hydrogen-induced cracking.</li>
+            </ul>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-10 mb-6">4. Inspection Methods</h2>
+            <p class="mb-6">In critical infrastructure, visual inspection is not enough. Methods like <strong>Dye Penetrant Testing (DPT)</strong>, <strong>Magnetic Particle Inspection (MPI)</strong>, and <strong>Ultrasonic Testing (UT)</strong> are used to find sub-surface flaws that could compromise the structure under load.</p>
+        `,
+        image: 'img/profile_cutting.png',
+        date: 'February 25, 2026',
+        author: 'Technical Fabrication Team'
+    },
+    {
+        id: 'hss-vs-open-sections-comparison',
+        title: 'Hollow Structural Sections (HSS) vs. Open Sections: A Performance Comparison',
+        summary: 'In the debate between Tubes and Beams, there is no single winner—only the right tool for the job. Understanding the torsional and axial differences is key.',
+        content: `
+            <p class="lead text-xl text-gray-600 mb-6 font-serif italic">In the debate between Tubes and Beams, there is no single winner—only the right tool for the job. Understanding the torsional and axial differences between <strong>Hollow Structural Sections (HSS)</strong> and open sections like <a href="product.html?id=ms-channels" class="text-sethBlue hover:underline">MS Channels</a> is key to architectural efficiency.</p>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-10 mb-6">1. Torsional Resistance: The HSS Advantage</h2>
+            <p class="mb-6">Open sections like I-beams are excellent at resisting bending, but they are relatively weak in "torsion" (twisting). Because HSS (square, rectangular, or circular tubes) have a closed perimeter, they are incredibly efficient at resisting twisting forces. This makes them the primary choice for curved structures and cantilevered signs.</p>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-10 mb-6">2. Aesthetic and Wind Loading</h2>
+            <p class="mb-6">HSS sections have a clean, modern look often favored in "exposed" architecture. Furthermore, circular tubes have a lower drag coefficient, meaning they experience lower wind loads than flat-faced I-beams or angles—a critical factor in tall transmission towers or coastal structures.</p>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-10 mb-6">3. Connection Complexity</h2>
+            <p class="mb-6">The downside of HSS is the connection. Bolting to a closed tube is difficult, often requiring specialized "blind bolts" or complex welding. I-beams and channels, with their accessible flanges, are much easier to bolt together on a construction site, often leading to faster assembly times.</p>
+        `,
+        image: 'img/ms_pipes.png',
+        date: 'February 25, 2026',
+        author: 'Engineering Design Team'
+    },
+    {
+        id: 'steel-staging-scaffolding-safety',
+        title: 'Steel Staging and Scaffolding: Safety Standards and Efficiency',
+        summary: 'In high-rise construction, the safety of the workforce is directly proportional to the quality of the temporary structures. Steel staging is the vital platform.',
+        content: `
+            <p class="lead text-xl text-gray-600 mb-6 font-serif italic">In high-rise construction, the safety of the workforce is directly proportional to the quality of the temporary structures they inhabit. <strong>Steel staging and scaffolding</strong> are the vital platforms that allow modern skyscrapers to climb, and understanding their engineering standards is a matter of life and death.</p>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-10 mb-6">1. Why Steel? Stability Over Alternatives</h2>
+            <p class="mb-6">While bamboo and wood are still used in some regions, steel is the global standard for heavy-duty construction. Steel tubes (HSS) offer predictable load-bearing capacities and can be reused dozens of times if properly maintained. At <a href="index.html" class="text-sethBlue hover:underline">Seth Steels</a>, we provide the high-quality <a href="product.html?id=ms-pipes" class="text-sethBlue hover:underline">MS Pipes</a> used by leading scaffolding manufacturers in India.</p>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-10 mb-6">2. Components of a Steel Scaffolding System</h2>
+            <ul class="list-disc pl-6 space-y-4 mb-8 text-lg">
+                <li><strong>Standards:</strong> The vertical tubes that carry the load to the ground.</li>
+                <li><strong>Ledgers:</strong> Horizontal tubes that connect the standards and provide support for the platforms.</li>
+                <li><strong>Transoms:</strong> Tubes that run perpendicular to the ledgers to support the planks.</li>
+                <li><strong>Couplers:</strong> The critical clamps that hold the system together.</li>
+            </ul>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-10 mb-6">3. Safety Standards: IS 2750 and Beyond</h2>
+            <p class="mb-6">In India, scaffolding must adhere to <strong>IS 2750</strong>. This standard dictates the minimum thickness and yield strength of the tubes. Using sub-standard pipes can lead to "buckling" under the weight of wet concrete and workers, a common cause of construction site failures.</p>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-10 mb-6">4. Efficiency Through Modular Scaffolding</h2>
+            <p class="mb-6">Modern "Cuplock" and "Ringlock" systems allow for much faster assembly than traditional tube-and-coupler methods. These modular systems rely on heavy-duty <a href="product.html?id=ms-pipes" class="text-sethBlue hover:underline">ERW pipes</a> and precise welding, reducing labor costs and significantly shortening project timelines.</p>
+        `,
+        image: 'img/ms_pipes.png',
+        date: 'February 25, 2026',
+        author: 'Construction Safety Board'
+    },
+    {
+        id: 'primary-steel-seismic-zone-v',
+        title: 'Role of Primary Steel in Seismic-Zone-V Infrastructure Projects',
+        summary: 'Seismic Zone V represents the highest risk level. In these regions, buildings must be resilient. Primary Steel is non-negotiable for critical infrastructure.',
+        content: `
+            <p class="lead text-xl text-gray-600 mb-6 font-serif italic">Seismic Zone V represents the highest risk level for earthquakes. In these regions, buildings cannot be rigid; they must be resilient. The use of <strong>Primary Steel</strong> is non-negotiable for ensuring that critical infrastructure stays standing when the earth moves.</p>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-10 mb-6">1. Understanding Seismic Zone V</h2>
+            <p class="mb-6">In India, regions like the Himalayas, Kutch, and parts of the Northeast are classified as Zone V. Here, structures must be designed for "Ductility"—the ability to undergo large deformations without snapping. This starts with the chemical purity of the steel.</p>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-10 mb-6">2. Why Primary Steel? The Purity Argument</h2>
+            <p class="mb-6">Primary steel (made from iron ore) has significantly lower levels of Sulfur and Phosphorus than secondary steel (made from scrap). High impurities make steel brittle. In an earthquake, brittle steel snaps instantly. High-purity steel from brands like <strong>SAIL</strong> and <strong>JSW</strong> (supplied by <a href="index.html" class="text-sethBlue hover:underline">Seth Steels</a>) provides the predictable elongation needed for seismic safety.</p>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-10 mb-6">3. Specialized Products: Fe 500D TMT Bars</h2>
+            <p class="mb-6">The 'D' in Fe 500D stands for <strong>Ductility</strong>. These bars are specifically designed for seismic zones. They have a higher UTS/YS (Ultimate Tensile Strength to Yield Strength) ratio, ensuring that the building will bend and sway, absorbing the energy of the earthquake rather than fracturing.</p>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-10 mb-6">4. Structural Steel Applications</h2>
+            <p class="mb-6">Beyond rebar, <a href="product.html?id=ms-beams" class="text-sethBlue hover:underline">MS Beams</a> and <a href="product.html?id=ms-plates" class="text-sethBlue hover:underline">Plates</a> used in bridges and hospitals in Zone V must meet strict impact-test requirements at low temperatures (Grade B or Grade C under IS 2062), ensuring they remain tough even in the harsh Himalayan winters.</p>
+        `,
+        image: 'img/tmt_bars.png',
+        date: 'February 25, 2026',
+        author: 'Seismic Engineering Group'
+    },
+    {
+        id: 'managing-steel-supply-chains-inventory',
+        title: 'Managing Steel Supply Chains: Inventory Strategies for Large-Scale Fabrication',
+        summary: 'For a large-scale fabricator, a missing shipment isn’t just an inconvenience—it’s a production stoppage. Supply chain management is a high-stakes balancing act.',
+        content: `
+            <p class="lead text-xl text-gray-600 mb-6 font-serif italic">For a large-scale fabricator, a missing shipment of <a href="product.html?id=ms-plates" class="text-sethBlue hover:underline">MS Plates</a> isn't just an inconvenience—it's a production stoppage that can cost millions. <strong>Supply chain management</strong> in the steel industry is a high-stakes balancing act between inventory costs and project deadlines.</p>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-10 mb-6">1. The Challenge of Lead Times</h2>
+            <p class="mb-6">Steel mills operate on long production cycles. Ordering a specialized size of <a href="product.html?id=ms-channels" class="text-sethBlue hover:underline">MS Channels</a> might have a lead time of 4-8 weeks. To mitigate this, successful fabricators utilize a "Safety Stock" strategy, holding enough common sizes to cover immediate needs while primary orders are in transit.</p>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-10 mb-6">2. "Just-In-Time" vs. "Just-In-Case"</h2>
+            <p class="mb-6">While JIT (Just-In-Time) reduces storage costs, it is risky in the volatile Indian market. Many contractors now favor a hybrid approach: "Just-In-Case" for critical path items and JIT for readily available materials like standard <a href="product.html?id=ms-angles" class="text-sethBlue hover:underline">Angles</a>.</p>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-10 mb-6">3. The Role of the Strategic Stockist</h2>
+            <p class="mb-6">Partners like <a href="index.html" class="text-sethBlue hover:underline">Seth Steels Enterprises</a> act as a buffer in the supply chain. By holding massive inventories of primary steel, we allow our clients to reduce their own storage footprint. This "VMI" (Vendor Managed Inventory) approach improves cash flow for fabricators, as they only pay for material as they need it.</p>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-10 mb-6">4. Digital Tracking and Traceability</h2>
+            <p class="mb-6">Modern supply chains rely on digital MTCs (Mill Test Certificates) and heat number tracking. Ensuring that the right grade of steel is used for the right part is essential for quality audits and project insurance.</p>
+        `,
+        image: 'img/ms_beams.png',
+        date: 'February 25, 2026',
+        author: 'Industrial Logistics Board'
+    },
+    {
+        id: 'marine-grade-steel-coastal-structures',
+        title: 'Marine Grade Steel: Why Specialized Grades are Essential for Coastal Structures',
+        summary: 'Saltwater is the natural enemy of steel. Marine grade steel is the specialized response, engineered to survive the most corrosive atmosphere on Earth.',
+        content: `
+            <p class="lead text-xl text-gray-600 mb-6 font-serif italic">Saltwater is the natural enemy of steel. In coastal environments, standard mild steel can begin to show significant corrosion within weeks. <strong>Marine grade steel</strong> is the specialized response to this challenge, engineered to survive the most corrosive atmosphere on Earth.</p>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-10 mb-6">1. The Chemistry of Resistance</h2>
+            <p class="mb-6">Standard steel corrodes because it forms flaky rust that allows moisture to penetrate deeper. Marine grade steel, such as <strong>ASTM A131</strong> or specialty grades like ABS Grade A/B, often contains small amounts of Copper, Chromium, and Nickel. These elements help form a more stable surface oxide that slows down the penetration of chloride ions from salt spray.</p>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-10 mb-6">2. Ship Building and Offshore Infrastructure</h2>
+            <p class="mb-6">From the hulls of container ships to the legs of oil platforms, marine steel is the foundational material. These structures must withstand not only corrosion but also extreme dynamic stresses from waves and wind. At <a href="index.html" class="text-sethBlue hover:underline">Seth Steels Enterprises</a>, we supply high-tensile <a href="product.html?id=ms-plates" class="text-sethBlue hover:underline">Marine Grade MS Plates</a> that meet the stringent certification requirements of the shipping industry.</p>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-10 mb-6">3. Protecting Coastal Construction</h2>
+            <p class="mb-6">Bridges, jetties, and seaside buildings require similar protection. Using standard <a href="product.html?id=tmt-bars" class="text-sethBlue hover:underline">TMT Bars</a> in coastal foundations without proper cover or specialized epoxy coatings is a recipe for disaster. For structural sections like <a href="product.html?id=ms-beams" class="text-sethBlue hover:underline">MS Beams</a> used in coastal sheds, we always recommend heavy-duty <a href="product.html?id=gi-sheets" class="text-sethBlue hover:underline">Galvanization</a> or the use of corrosion-resistant alloys.</p>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-10 mb-6">4. Maintenance and Longevity</h2>
+            <p class="mb-6">While the initial cost of marine grade steel is higher, the "Total Cost of Ownership" is significantly lower. Standard steel requires constant painting and repairs, whereas a properly specified marine grade structure can last 20-30 years with minimal intervention, specifically in the harsh coastal zones of Mumbai and Gujarat.</p>
+        `,
+        image: 'img/ms_plates.png',
+        date: 'February 25, 2026',
+        author: 'Coastal Engineering Desk'
+    },
+    {
+        id: 'digital-transformation-steel-industry',
+        title: 'Digital Transformation in Steel: From CNC Cutting to Smart Inventory',
+        summary: 'The image of the steel industry as a "smoke-and-sparks" sector is being replaced by a high-tech reality. Digital transformation is optimizing every step.',
+        content: `
+            <p class="lead text-xl text-gray-600 mb-6 font-serif italic">The image of the steel industry as a "smoke-and-sparks" sector is being rapidly replaced by a high-tech reality. <strong>Digital transformation</strong> is optimizing every step of the steel lifecycle, from the moment a plate is cut to the day it arrives on a construction site.</p>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-10 mb-6">1. CNC Profile Cutting: Precision at Scale</h2>
+            <p class="mb-6">Gone are the days of manual oxygen-fuel torches. Modern <a href="product.html?id=ms-plates" class="text-sethBlue hover:underline">Profile Cutting</a> utilizes CNC (Computer Numerical Control) plasma and laser systems. These machines take CAD drawings directly and cut complex shapes with 0.5mm precision. This eliminates waste and allows for the fabrication of intricate components that were previously impossible.</p>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-10 mb-6">2. Smart Inventory Management</h2>
+            <p class="mb-6">Managing thousands of tons of <a href="product.html?id=ms-angles" class="text-sethBlue hover:underline">Angles</a>, <a href="product.html?id=ms-channels" class="text-sethBlue hover:underline">Channels</a>, and <a href="product.html?id=ms-beams" class="text-sethBlue hover:underline">Beams</a> requires more than a clipboard. At <a href="index.html" class="text-sethBlue hover:underline">Seth Steels</a>, we utilize digital inventory tracking to ensure that we know the exact heat number, location, and age of every item in our yard. This transparency allows us to provide real-time stock updates to our clients, improving their procurement efficiency.</p>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-10 mb-6">3. Traceability Through Blockchain and IoT</h2>
+            <p class="mb-6">The future of steel involves end-to-end traceability. By tagging bundles with QR codes linked to digital MTCs (Mill Test Certificates), contractors can verify the origin and quality of their steel instantly on-site. This is becoming a requirement for high-security government projects and smart-city infrastructure.</p>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-10 mb-6">4. Conclusion</h2>
+            <p class="mb-6">Digital transformation isn't just about robots; it's about data-driven decision-making. By embracing technology, the steel industry is becoming faster, more transparent, and significantly more sustainable. Seth Steels Enterprises remains at the forefront of this digital shift, investing in the tools that make B2B steel sourcing smoother for our partners.</p>
+        `,
+        image: 'img/profile_cutting.png',
+        date: 'February 25, 2026',
+        author: 'Modern Steel Technology Team'
+    },
+    {
+        id: 'guide-to-steel-flanges-fittings',
+        title: 'Guide to Steel Flanges and Fittings: Connecting the Industrial World',
+        summary: 'In industrial piping systems, the pipe itself is only half the story. Flanges and fittings are the connectors that allow systems to be assembled and maintained.',
+        content: `
+            <p class="lead text-xl text-gray-600 mb-6 font-serif italic">In industrial piping systems, the pipe itself is only half the story. <strong>Flanges and fittings</strong> are the connectors that allow systems to be assembled, maintained, and redirected. From massive oil pipelines to chemical processing plants, these components are the glue of industrial fluid management.</p>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-10 mb-6">1. What is a Flange?</h2>
+            <p class="mb-6">A flange is a flat rim, collar, or rib on a pipe used to strengthen an object, hold it in place, or attach it to another object. Most flanges in the industrial sector are manufactured from forged <a href="product.html?id=ms-plates" class="text-sethBlue hover:underline">MS Plates</a> or high-grade alloy sections. They are typically bolted together with a gasket between them to create a leak-proof seal.</p>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-10 mb-6">2. Common Types of Flanges</h2>
+            <ul class="list-disc pl-6 space-y-4 mb-8 text-lg">
+                <li><strong>Weld Neck Flanges:</strong> Used for high-pressure, critical applications.</li>
+                <li><strong>Slip-on Flanges:</strong> Easier to align and weld, commonly used in general fabrication.</li>
+                <li><strong>Blind Flanges:</strong> Used to seal the end of a piping system.</li>
+                <li><strong>Socket Weld Flanges:</strong> Ideal for smaller, high-pressure pipes.</li>
+            </ul>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-10 mb-6">3. Standards and Ratings</h2>
+            <p class="mb-6">Flanges must adhere to international standards like <strong>ASME B16.5</strong> or Indian standards like <strong>IS 6392</strong>. These define the "Pressure Class" (e.g., #150, #300, #600), which dictates how much pressure the flange can safely withstand without deforming or leaking.</p>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-10 mb-6">4. Material Selection</h2>
+            <p class="mb-6">The choice of material for fittings must match the pipe. If you are using <a href="product.html?id=ms-pipes" class="text-sethBlue hover:underline">MS Pipes</a>, your flanges should also be mild steel to prevent "galvanic corrosion." For corrosive chemical lines, stainless steel or specialized coatings are required.</p>
+        `,
+        image: 'img/ms_pipes.png',
+        date: 'February 25, 2026',
+        author: 'Industrial Piping Board'
+    },
+    {
+        id: 'economic-impact-steel-trade-policies',
+        title: 'Economic Impact of Steel Trade Policies on Indian Construction',
+        summary: 'Steel is a global commodity. For contractors and developers, understanding steel trade dynamics is essential for accurate project budgeting.',
+        content: `
+            <p class="lead text-xl text-gray-600 mb-6 font-serif italic">Steel is a global commodity, and its price at a local yard in Mumbai is directly affected by trade policies thousands of miles away. For contractors and developers, understanding <strong>steel trade dynamics</strong> is essential for accurate project budgeting and risk management.</p>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-10 mb-6">1. Import Duties and Anti-Dumping Measures</h2>
+            <p class="mb-6">Governments often use import duties to protect domestic steel producers from "dumping"—the practice of selling imported steel at prices below the cost of production. When anti-dumping duties are imposed, the cost of imported <a href="product.html?id=cr-sheets" class="text-sethBlue hover:underline">CR Sheets</a> and <a href="product.html?id=ms-plates" class="text-sethBlue hover:underline">Plates</a> rises, which in turn allows domestic mills to maintain or increase their prices.</p>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-10 mb-6">2. The "China Factor"</h2>
+            <p class="mb-6">China produces over 50% of the world's steel. Any shift in Chinese domestic demand or export policy ripples through the global market. When the Chinese real estate market slows down, their surplus steel often floods the global market, putting downward pressure on prices for products like <a href="product.html?id=ms-beams" class="text-sethBlue hover:underline">MS Beams</a> and <a href="product.html?id=ms-channels" class="text-sethBlue hover:underline">MS Channels</a>.</p>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-10 mb-6">3. Quality Standards as a Trade Barrier</h2>
+            <p class="mb-6">In India, the Mandatory BIS Certification requirement acts as a non-tariff trade barrier. By requiring all structural steel and <a href="product.html?id=tmt-bars" class="text-sethBlue hover:underline">TMT Bars</a> to adhere to IS standards, the government ensures that only high-quality material enters the critical infrastructure pipeline, protecting the consumer while favoring local primary producers.</p>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-10 mb-6">4. Strategic Procurement in a Policy-Driven Market</h2>
+            <p class="mb-6">Since trade policies can change with little notice, savvy buyers don't put all their eggs in one basket. At <a href="index.html" class="text-sethBlue hover:underline">Seth Steels Enterprises</a>, we maintain a diversified supply network to ensure that our clients are protected from sudden policy-induced shortages, providing a consistent supply of primary steel regardless of the global trade winds.</p>
+        `,
+        image: 'img/ms_angles.png',
+        date: 'February 25, 2026',
+        author: 'Market Economics Desk'
     }
 ];
 
