@@ -39,10 +39,14 @@
             width: 100%;
         }
 
-        /* Independent Column Scroll Utilities */
+        /* Sticky Sidebar for Article Page */
         @media (min-width: 1024px) {
-            body {
-                overflow: hidden;
+            .sticky-sidebar {
+                position: sticky;
+                top: 8rem;
+                align-self: start;
+                max-height: calc(100vh - 10rem);
+                overflow-y: auto;
             }
         }
 
@@ -128,11 +132,11 @@
     </header>
 
     <!-- Article Content -->
-    <div id="article-container" class="pt-28 h-screen w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 h-full">
+    <div id="article-container" class="pt-32 pb-20 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
 
-            <!-- Left Column: Article Content (Scrollable) -->
-            <div class="lg:col-span-2 h-full lg:overflow-y-auto hide-scrollbar py-8 lg:pr-4">
+            <!-- Left Column: Article Content -->
+            <div class="lg:col-span-2 py-8 lg:pr-4">
                 <div class="space-y-12 pb-20">
                     <!-- Loading State -->
                     <div id="loading" class="text-center py-20">
@@ -191,8 +195,8 @@
                 </div>
             </div>
 
-            <!-- Right Column: Lead Form & Contact Sidebar (Scrollable) -->
-            <aside class="h-full lg:overflow-y-auto hide-scrollbar py-8 space-y-8">
+            <!-- Right Column: Lead Form & Contact Sidebar -->
+            <aside class="sticky-sidebar py-8 space-y-8 hide-scrollbar">
                 <!-- Lead Form Widget -->
                 <div class="bg-gray-900 rounded-2xl shadow-2xl p-8 relative overflow-hidden">
                     <!-- Subtle background pattern -->
