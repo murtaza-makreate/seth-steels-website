@@ -141,7 +141,10 @@
             const grid = document.getElementById('articles-grid');
 
             if (typeof window.articles !== 'undefined' && window.articles.length > 0) {
-                window.articles.forEach(article => {
+                // Sort articles by date descending
+                const sortedArticles = [...window.articles].sort((a, b) => new Date(b.date) - new Date(a.date));
+
+                sortedArticles.forEach(article => {
                     const card = document.createElement('div');
                     card.className = 'glass-card rounded-xl overflow-hidden group cursor-pointer transition-all duration-300 hover:shadow-glow-soft bg-white/60';
                     card.onclick = () => window.location.href = `article.html?id=${article.id}`;

@@ -964,8 +964,10 @@
             // --- Load Latest Articles ---
             const articleGrid = document.getElementById('latest-articles-grid');
             if (articleGrid && window.articles) {
-                // Get most recent 3 articles
-                const latest = window.articles.slice(0, 3);
+                // Sort articles by date descending and get most recent 3
+                const latest = [...window.articles]
+                    .sort((a, b) => new Date(b.date) - new Date(a.date))
+                    .slice(0, 3);
 
                 latest.forEach(article => {
                     const card = document.createElement('div');
