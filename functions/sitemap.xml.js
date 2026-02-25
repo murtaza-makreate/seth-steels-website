@@ -76,8 +76,9 @@ export async function onRequestGet({ request, env }) {
 
         return new Response(xml, {
             headers: {
-                'Content-Type': 'application/xml',
-                'Cache-Control': 'public, max-age=3600' // Cache for 1 hour
+                'content-type': 'application/xml; charset=utf-8',
+                'cache-control': 'public, max-age=3600',
+                'x-content-type-options': 'nosniff'
             }
         });
 
