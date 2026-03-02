@@ -4,7 +4,8 @@
   "description": "A premium, modern B2B website for Seth Steels Enterprises, a leading industrial steel supplier.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "echo 'No build script required'"
   },
   "repository": {
     "type": "git",
