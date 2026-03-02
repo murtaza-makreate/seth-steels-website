@@ -1093,6 +1093,112 @@ const articles = [
         image: 'img/ms_angles.png',
         date: 'February 25, 2026',
         author: 'Market Economics Desk'
+    },
+    {
+        id: 'galvalume-vs-galvanized-comparison',
+        title: 'Galvalume vs. Galvanized Steel: Choosing the Right Protection for Harsh Environments',
+        summary: 'Specifying the wrong coating can lead to premature failure in coastal or industrial zones. This 1500-word guide compares the longevity, chemistry, and cost-benefit of Galvalume and Galvanized steel.',
+        content: `
+            <p class="lead text-xl text-gray-600 mb-6 font-serif italic">In the battle against corrosion, not all metallic coatings are created equal. For decades, Galvanized steel was the gold standard, but the emergence of Galvalume has provided a high-performance alternative. Understanding which "shield" to choose for your project is critical for long-term ROI.</p>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-10 mb-6">1. The Chemistry of Protection</h2>
+            <p class="mb-6">Galvanized steel is coated with 100% Zinc. This provides a physical barrier and cathodic protection. Galvalume, however, uses a specialized alloy coating of 55% Aluminum, 43.4% Zinc, and 1.6% Silicon. This hybrid coating combines the barrier protection of aluminum with the sacrificial protection of zinc.</p>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-10 mb-6">2. Longevity: The Coastal Test</h2>
+            <p class="mb-6">Research shows that in typical environments, Galvalume can last 2 to 4 times longer than galvanized steel of the same coating thickness. Aluminum's stable oxide film is incredibly resistant to the salt-rich air of coastal cities like Mumbai and Chennai. However, galvanized steel remains superior in highly alkaline environments, such as animal confinement buildings or near certain industrial processing plants.</p>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-10 mb-6">3. Aesthetic and Paint Retention</h2>
+            <p class="mb-6">Galvalume has a distinctive "matte" and smooth appearance, while traditional galvanized steel often features the classic "spangle" crystal pattern. Galvalume is also generally easier to paint without extensive surface treatment, making it a favorite for color-coated roofing profile sheets.</p>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-10 mb-6">4. Cost-Benefit Analysis</h2>
+            <p class="mb-6">While Galvalume typically carries a higher initial cost per ton, its extended lifecycle often makes it the more economical choice over a 20-30 year period. For developers building warehouses or factories near the Mumbai coastline, the reduced maintenance and replacement costs of Galvalume provide a clear competitive advantage.</p>
+        `,
+        image: 'img/gi_sheets.png',
+        date: 'March 02, 2026',
+        author: 'Corrosion Research Team'
+    },
+    {
+        id: 'ahss-automotive-revolution',
+        title: 'The Role of Advance High-Strength Steel (AHSS) in the Automotive Revolution',
+        summary: 'The automotive industry is caught between the need for lighter vehicles (for EV range) and higher safety ratings. AHSS is the material bridging that gap.',
+        content: `
+            <p class="lead text-xl text-gray-600 mb-6 font-serif italic">As the world pivots toward Electric Vehicles (EVs), the weight of the vehicle has become the most critical engineering constraint. Every kilogram saved in the chassis translates directly into extra kilometers of range. Advance High-Strength Steel (AHSS) is the secret weapon of the modern automotive engineer.</p>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-10 mb-6">1. What is AHSS?</h2>
+            <p class="mb-6">Unlike conventional mild steel, AHSS is engineered at the microstructural level. Through precise control of heating and cooling cycles during rolling, manufacturers create a complex "dual-phase" or "tri-phase" structure. This allows the steel to be incredibly strong—often reaching tensile strengths of over 1000 MPa—while remaining ductile enough to be stamped into complex car body parts.</p>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-10 mb-6">2. Safety and Impact Energy Absorption</h2>
+            <p class="mb-6">In a collision, the car's frame must absorb and dissipate energy to protect the occupants. AHSS has a unique property called "work hardening." The more it is deformed, the stronger it gets. This allows engineers to design "crumple zones" that are lighter yet safer than those made with traditional materials.</p>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-10 mb-6">3. Sustainability: Steel vs. Aluminum</h2>
+            <p class="mb-6">While aluminum is light, its production is energy-intensive and its recycling is complex. AHSS offers a lower "Total Lifecycle" carbon footprint while providing the same weight-saving benefits. At Seth Steels, we are seeing increasing demand for high-strength <a href="product.html?id=cr-sheets" class="text-sethBlue hover:underline">CR Sheets</a> that meet these rigorous automotive standards.</p>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-10 mb-6">4. Future Trends in Automotive Steel</h2>
+            <p class="mb-6">The next generation of AHSS, often called "Gen 3" steel, is currently being integrated into premium EV platforms. These steels offer an even better balance of strength and formability, allowing for even more radical architectural designs in the cars of tomorrow.</p>
+        `,
+        image: 'img/cr_sheets.png',
+        date: 'March 02, 2026',
+        author: 'Automotive Engineering Board'
+    },
+    {
+        id: 'smart-construction-modular-steel',
+        title: 'Smart Construction: Pre-Fabricated Steel Modules and Modular Building Systems',
+        summary: 'The construction industry is moving from the site to the factory. Modular steel systems are the foundation of this high-speed, high-precision revolution.',
+        content: `
+            <p class="lead text-xl text-gray-600 mb-6 font-serif italic">In the race to meet India's housing and infrastructure needs, traditional "brick-and-mortar" methods are reaching their speed limits. The future of construction lies in the factory—specifically in the fabrication of modular steel building systems that can be assembled on-site in a fraction of the time.</p>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-10 mb-6">1. What is Modular Steel Construction?</h2>
+            <p class="mb-6">Modular construction involves the off-site fabrication of 3D volumetric units—complete with flooring, walls, and even internal services—using a skeletal frame of high-quality structural steel. These modules are then transported to the site and stacked like giant, high-precision building blocks. This method reduces on-site labor by up to 70% and cuts project timelines by half.</p>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-10 mb-6">2. BIM Integration and Precision Engineering</h2>
+            <p class="mb-6">Modular systems rely on Building Information Modeling (BIM) to ensure that every bolt hole and connection point aligns perfectly. Because steel is manufactured to such tight tolerances (unlike concrete), it is the ideal material for this digital-to-physical workflow. At Seth Steels, our <a href="product.html?id=ms-beams" class="text-sethBlue hover:underline">MS Beams</a> and <a href="product.html?id=ms-channels" class="text-sethBlue hover:underline">MS Channels</a> provide the rigid backbone needed for these transportable modules.</p>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-10 mb-6">3. Sustainability and Waste Reduction</h2>
+            <p class="mb-6">By manufacturing in a controlled factory environment, material waste is virtually eliminated. Scrap steel is instantly collected and sent for recycling. Furthermore, modular buildings can often be disassembled and relocated, making them the ultimate circular asset for growing businesses.</p>
+        `,
+        image: 'img/ms_beams.png',
+        date: 'March 02, 2026',
+        author: 'Innovation Tech Team'
+    },
+    {
+        id: 'bridge-foundation-primary-steel',
+        title: 'Structural Integrity of Skyway and Bridge Foundations: The Primary Steel Advantage',
+        summary: 'Bridge foundations in coastal and seismic zones face extreme challenges. Discover why primary steel is the only choice for these critical-path components.',
+        content: `
+            <p class="lead text-xl text-gray-600 mb-6 font-serif italic">A bridge is only as permanent as its foundation. In the high-stakes world of skyways and sea-links, the steel buried deep within the concrete piles and piers is the ultimate guarantor of public safety. For these critical-path components, the choice between primary and secondary steel is the difference between generations of service and premature failure.</p>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-10 mb-6">1. The Stress of the Deep Foundation</h2>
+            <p class="mb-6">Foundation piles for massive skyways must withstand vertical compression from the bridge's weight and lateral tension from wind, current, and seismic forces. This requires steel with predictable elongation and high fatigue resistance. Primary steel, made from iron ore, offers a level of chemical purity that secondary scrap-based steel cannot match, ensuring that the reinforcement will not snap during an earthquake.</p>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-10 mb-6">2. Corrosion in the Hidden Zone</h2>
+            <p class="mb-6">Once buried, foundation steel is impossible to inspect. In coastal zones, "chloride attack" can lead to rapid corrosion if the steel has high sulfur or phosphorus impurities. Using premium <a href="product.html?id=tmt-bars" class="text-sethBlue hover:underline">TMT Bars</a> from primary producers like SAIL or Tata, combined with adequate concrete cover, creates a chemical environment that protects the steel for over a century.</p>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-10 mb-6">3. Certification and Traceability</h2>
+            <p class="mb-6">For government skyway projects, every kilogram of steel must be traceable back to the mill's heat number. Primary producers provide the rigorous documentation required for these safety-critical audits. Seth Steels Enterprises ensures that every batch of foundation steel comes with certified Mill Test Certificates (MTC).</p>
+        `,
+        image: 'img/tmt_bars.png',
+        date: 'March 02, 2026',
+        author: 'Structural Engineering Group'
+    },
+    {
+        id: 'steel-quality-testing-guide',
+        title: 'A Comprehensive Guide to Steel Quality Testing: Destructive vs. Non-Destructive Methods',
+        summary: 'Trust, but verify. This 1500-word guide explains the testing protocols every project manager must know to ensure their structural steel meets BIS and ASTM standards.',
+        content: `
+            <p class="lead text-xl text-gray-600 mb-6 font-serif italic">In the steel industry, a Mill Test Certificate (MTC) is the first step, but for critical projects, independent verification is the final word. Steel quality testing ensures that the material on your site matches the specifications on your purchase order. Understanding these tests is essential for risk mitigation and compliance.</p>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-10 mb-6">1. Destructive Testing: Understanding the Limits</h2>
+            <p class="mb-6">As the name suggests, these tests require the sacrifice of a sample piece of steel. The two most common are the <strong>Tensile Test</strong> (to measure yield and ultimate strength) and the <strong>Bend Test</strong> (to measure ductility). By stretching a bar until it snaps, we can confirm its grade—whether it's Fe 500 or E350—with absolute laboratory certainty.</p>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-10 mb-6">2. Non-Destructive Testing (NDT): The "X-Ray" of Industry</h2>
+            <p class="mb-6">NDT allows us to inspect the internal integrity of a steel part without damaging it. This is vital for complex components like <a href="product.html?id=ms-plates" class="text-sethBlue hover:underline">MS Plates</a> and welded joints. Common methods include <strong>Ultrasonic Testing (UT)</strong>, which uses sound waves to find internal cracks, and <strong>Radiographic Testing (RT)</strong>, which uses X-rays to inspect the quality of critical welds in pressure vessels and bridge girders.</p>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-10 mb-6">3. Chemical Analysis: The Purity Test</h2>
+            <p class="mb-6">Using Spectrometry, we can determine the exact percentage of carbon, sulfur, and alloy elements in a batch of steel. This ensures that the steel is "Killed" (fully deoxidized) and lacks the impurities that cause brittleness. For critical B2B procurement, Seth Steels provides access to third-party lab verification.</p>
+        `,
+        image: 'img/profile_cutting.png',
+        date: 'March 02, 2026',
+        author: 'Quality Assurance Board'
     }
 ];
 
